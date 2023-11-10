@@ -1,0 +1,4 @@
+FROM python:2.7
+COPY . /app
+CMD ["python", "/app/hello.py"] 
+RUN echo "print('Hello, world!')" > /app/hello.py
