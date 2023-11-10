@@ -80,7 +80,7 @@ ENTRYPOINT ["python", "app.py"]
 Скрины подтверждающие выполнение работы: 
 
 <img src="https://github.com/nttrg/oblaka/blob/main/screens/screen4.jpeg" width="600">
-<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen5.jpeg" width="600">
+<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen5.jpeg" >
 <img src="https://github.com/nttrg/oblaka/blob/main/screens/screen6.jpeg" width="600">
 <img src="https://github.com/nttrg/oblaka/blob/main/screens/screen7.jpeg" width="600">
 
