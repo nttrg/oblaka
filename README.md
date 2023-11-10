@@ -20,11 +20,11 @@
 
 Скрины подтверждающие выполнение работы: 
 
- <img src="https://github.com/nttrg/oblaka/blob/main/screen1.jpeg" width="600">
+ <img src="https://github.com/nttrg/oblaka/blob/main/screens/screen1.jpeg" width="600">
 
 Перенесённый файл на компьютаре С:
 
- <img src="https://github.com/nttrg/oblaka/blob/main/screen3.jpeg" width="600">
+ <img src="https://github.com/nttrg/oblaka/blob/main/screens/screen2.jpeg" width="600">
 
 
  # Лабораторная работа 2
@@ -79,7 +79,10 @@ ENTRYPOINT ["python", "app.py"]
 
 Скрины подтверждающие выполнение работы: 
 
- <img src="https://github.com/nttrg/oblaka/blob/main/screen1.jpeg" width="600">
+<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen4.jpeg" width="600">
+<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen5.jpeg" width="600">
+<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen6.jpeg" width="600">
+<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen7.jpeg" width="600">
 
 ## Плохие практики при использовании контейнера:
 1. **Неоптимальное использование ресурсов**: Если контейнер не настроен оптимально, он может использовать лишние ресурсы, такие как CPU, память или дисковое пространство. Например, если контейнеру выделено слишком много памяти, это может привести к неэффективному использованию ресурсов хост-системы. Рекомендуется настроить контейнер с учетом требований приложения и ограничить ресурсы, если это необходимо.
