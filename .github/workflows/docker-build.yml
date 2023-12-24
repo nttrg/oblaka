@@ -1,0 +1,31 @@
+name: Docker Build
+
+on:
+  push:
+    branches:
+      - main # или другая ветка, в которую вы делаете пуш
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check Out Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Build Docker Image
+      run: docker build -t my-docker-image .
+
+    - name: Save Output File
+      run: docker run --rm my-docker-image cat /output.txt > output.txt
+
+    - name: Commit Changes
+      run: |
+        git config --global user.email "actions@example.com"
+        git config --global user.name "GitHub Actions"
+        git add output.txt
+        git commit -m "Add output.txt [skip ci]"
+        git push
