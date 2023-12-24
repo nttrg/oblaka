@@ -3,7 +3,7 @@ name: Docker Build
 on:
   push:
     branches:
-      - main # или другая ветка, в которую вы делаете пуш
+      - main
 
 jobs:
   build:
