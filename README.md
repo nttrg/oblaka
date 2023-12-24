@@ -113,7 +113,7 @@ name: Docker Build
 on:
   push:
     branches:
-      - main # или другая ветка, в которую вы делаете пуш
+      - main
 
 jobs:
   build:
@@ -134,11 +134,13 @@ jobs:
 
     - name: Commit Changes
       run: |
-        git config --global user.email "actions@example.com"
-        git config --global user.name "GitHub Actions"
+        git config --global user.email "wwwnataby@gmail.com"
+        git config --global user.name "nttrg"
         git add output.txt
         git commit -m "Add output.txt [skip ci]"
-        git push
+        git push --set-upstream origin HEAD:${GITHUB_REF#refs/heads/} --force
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 Этот workflow будет срабатывать при каждом пуше в ветку main. Он собирает Docker образ, запускает контейнер для сохранения файла output.txt из контейнера, коммитит изменения и пушит их обратно в репозиторий.
 
