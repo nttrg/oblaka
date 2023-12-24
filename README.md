@@ -146,6 +146,7 @@ jobs:
 
 3. Проверяем выполнение. После пуша в репозиторий во вкладке Actions можно увидеть, что сборка прошла успешно. И с репозитории появился файл output.txt с сообщением "Hello, world!"
 
+<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen10.png" width="600">
 
 
 
