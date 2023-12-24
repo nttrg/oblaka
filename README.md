@@ -90,8 +90,60 @@ ENTRYPOINT ["python", "app.py"]
 
 2. Необновление контейнера: Если контейнер не обновляется регулярно, он может содержать уязвимости безопасности или устаревшие зависимости. Рекомендуется регулярно обновлять контейнеры, применяя последние исправления безопасности и версии зависимостей, чтобы минимизировать риски и обеспечить безопасность приложения.
 
-# Лабораторная 3
+# Лабораторная работа 3
 
 Сделать, чтобы после пуша в ваш репозиторий автоматически собирался докер образ и результат его сборки сохранялся куда-нибудь. (например, если результат - текстовый файлик, он должен автоматически сохраниться на локальную машину, в ваш репозиторий или на ваш сервер).
 
 **Выполнение лабораторной работы**:
+
+1. В корневом каталоге репозитория создаём файл Dockerfile, из которого будет собираться образ, и прописываем в нём следующие команды:
+
+```Dockerfile
+FROM alpine:latest
+RUN echo "Hello, world!" > /output.txt
+```
+
+Этот Dockerfile использует базовый образ Alpine Linux и внутри контейнера создает файл output.txt с сообщением "Hello, world!".
+
+2. Для автоматической сборки образа настроим GitHub Actions. Для этого в репозитории создаём новый файл с названием .github/workflows/docker-build.yml. и добавляем следующий код:
+
+```
+name: Docker Build
+
+on:
+  push:
+    branches:
+      - main # или другая ветка, в которую вы делаете пуш
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check Out Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Build Docker Image
+      run: docker build -t my-docker-image .
+
+    - name: Save Output File
+      run: docker run --rm my-docker-image cat /output.txt > output.txt
+
+    - name: Commit Changes
+      run: |
+        git config --global user.email "actions@example.com"
+        git config --global user.name "GitHub Actions"
+        git add output.txt
+        git commit -m "Add output.txt [skip ci]"
+        git push
+```
+Этот workflow будет срабатывать при каждом пуше в ветку main. Он собирает Docker образ, запускает контейнер для сохранения файла output.txt из контейнера, коммитит изменения и пушит их обратно в репозиторий.
+
+3. Проверяем выполнение. После пуша в репозиторий во вкладке Actions можно увидеть, что сборка прошла успешно. И с репозитории появился файл output.txt с сообщением "Hello, world!"
+
+
+
+
