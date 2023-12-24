@@ -137,7 +137,7 @@ jobs:
         git config --global user.email "wwwnataby@gmail.com"
         git config --global user.name "nttrg"
         git add output.txt
-        git commit -m "Add output.txt [skip ci]"
+        git commit -m "Add output.txt"
         git push --set-upstream origin HEAD:${GITHUB_REF#refs/heads/} --force
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -151,7 +151,6 @@ jobs:
 <img src="https://github.com/nttrg/oblaka/blob/main/screens/screen8.png" width="800">
 <img src="https://github.com/nttrg/oblaka/blob/main/screens/screen9.png" width="800">
 <img src="https://github.com/nttrg/oblaka/blob/main/screens/screen11.png" width="800">
-<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen10.png">
 
 
 
