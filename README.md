@@ -148,9 +148,9 @@ jobs:
    
 Скрины подтверждающие выполнение работы: 
 
-<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen8.png" width="600">
-<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen9.png" width="600">
-<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen11.png" width="600">
+<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen8.png" width="800">
+<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen9.png" width="800">
+<img src="https://github.com/nttrg/oblaka/blob/main/screens/screen11.png" width="800">
 <img src="https://github.com/nttrg/oblaka/blob/main/screens/screen10.png">
 
 
