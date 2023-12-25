@@ -32,12 +32,12 @@
 1. Убедились, что все три компьютера находятся в одной локальной сети и имеют соединение друг с другом. Для этого на компьютерах MacOS активировали SSH-сервер, который установлен и включен по умолчанию. И также его активировали и на компьютере Windows (начиная с Windows 10, OpenSSH поставляется в качестве опциональной функции).
 2. Узнали IP-адрес всех компьютеров в локальной сети.
 3. Создали приватный и публичный ключи с помощью команды ssh-keygen -t rsa -b 2048
-   <img src="https://github.com/nttrg/oblaka/blob/main/screens/scr1.jpeg" width="600">
+   <img src="https://github.com/nttrg/oblaka/blob/main/screens/scr1.png" width="600">
 4. Скопировали публичный ключ на устройста В и С в файл authorized_keys.
 5. С помощью команды ```ssh nttrg@192.168.31.88``` подключились к компьютеру В с помощью публичного ключа. Пароль пользователя вводить не пришлось. Готово, мы имеем доступ к компьютеру В.
-   <img src="https://github.com/nttrg/oblaka/blob/main/screens/scr2.jpeg" width="600">
+   <img src="https://github.com/nttrg/oblaka/blob/main/screens/scr2.png" width="600">
 7. Аналогично подключили к компьютеру С с помощью команды ```ssh mymac@192.168.31.144```.
-   <img src="https://github.com/nttrg/oblaka/blob/main/screens/scr3.jpeg" width="600">
+   <img src="https://github.com/nttrg/oblaka/blob/main/screens/scr3.png" width="600">
    
 
 # Лабораторная работа 2
